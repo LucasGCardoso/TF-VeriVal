@@ -1,6 +1,7 @@
 package com.bcopstein;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.bcopstein.entidades.geometria.Area;
 import com.bcopstein.entidades.geometria.Ponto;
@@ -8,7 +9,7 @@ import com.bcopstein.entidades.geometria.Reta;
 import com.bcopstein.entidades.geometria.SituacaoReta;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+//import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -17,19 +18,51 @@ public class AreaTest {
 
     @BeforeEach
     public void setup(){
-        area = new Area(new Ponto(10,50),new Ponto(60,10));
-    }
-
-    @Test
-    public void testaPontoCentral(){
-        Ponto p = area.pontoCentral();
-        assertEquals(35,p.getX());
-        assertEquals(30,p.getY());
+         area = new Area(new Ponto(0,2),new Ponto(6,0));
     }
 
     @ParameterizedTest
-    @CsvSource({"15,40,35,40,TODA_DENTRO",
-                "15, 5,35, 5,TODA_FORA"})
+    @CsvSource({"0,2,6,0"})
+    public void testaConstrutor(int x1,int y1,int x2,int y2){
+        Ponto superior = new Ponto(x1, y1);
+        Ponto inferior = new Ponto(x2, y2);
+        Area area2 = new Area(superior, inferior);
+        assertTrue(area2.getPSupEsq().equals(superior));
+        assertTrue(area2.getPSupEsq().equals(inferior));
+    }
+
+    @ParameterizedTest
+    @CsvSource({"3,1"})
+    public void testaPontoCentral(int centralX, int centralY){
+        Ponto central = new Ponto(centralX, centralY);
+        assertTrue(area.pontoCentral().equals(central));
+    }
+
+    @ParameterizedTest
+    @CsvSource({"1,3,1",
+                "1,-1,2",
+                "7,1,4",
+                "-1,1,8",
+                "1,1,0"})
+    public void testaCodificaPonto(int pontoX, int pontoY, int byteCorretoint){
+        Ponto ponto = new Ponto(pontoX, pontoY);
+
+        byte number = area.codificaPonto(ponto);
+        byte byteCorreto = (byte)byteCorretoint;
+        assertEquals(number, byteCorreto);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"1,1,4,1,TODA_DENTRO",
+                "7,1,8,2,TODA_FORA",
+                "3,3,5,4,TODA_FORA",
+                "-2,1,-1,1,TODA_FORA",
+                "3,-2,5,-3,TODA_FORA",
+                "-3,-5,-2,-2,TODA_FORA",
+                "-5,5,-2,3,TODA_FORA",
+                "7,3,9,6,TODA_FORA",
+                "7,-1,9,-4,TODA_FORA",
+                "3,1,8,3,INTERSECTA"})
     public void testaClassifica(int x1,int y1,int x2,int y2,String classificacao){
         Reta reta = new Reta(new Ponto(x1,y1), new Ponto(x2,y2));
         SituacaoReta sitEsp = switch(classificacao){
@@ -39,6 +72,23 @@ public class AreaTest {
             default -> SituacaoReta.TODA_DENTRO;
         };
         SituacaoReta sitObs = area.classifica(reta);
+        assertEquals(sitEsp, sitObs);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"0,2,6,0,T",
+                "0,3,6,0,F"})
+    public void testaEquals(int x1,int y1,int x2,int y2,String esperado){
+        Ponto superior = new Ponto(x1, y1);
+        Ponto inferior = new Ponto(x2, y2);
+        Area area2 = new Area(superior, inferior);
+        
+        boolean sitEsp = switch(esperado){
+            case "T" -> true;
+            case "F" -> false;
+            default -> false;
+        };
+        boolean sitObs = area.equals(area2);
         assertEquals(sitEsp, sitObs);
     }
 }
