@@ -28,7 +28,7 @@ public class AreaTest {
         Ponto inferior = new Ponto(x2, y2);
         Area area2 = new Area(superior, inferior);
         assertTrue(area2.getPSupEsq().equals(superior));
-        assertTrue(area2.getPSupEsq().equals(inferior));
+        assertTrue(area2.getPInfDir().equals(inferior));
     }
 
     @ParameterizedTest

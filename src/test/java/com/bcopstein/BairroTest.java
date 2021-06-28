@@ -1,6 +1,8 @@
 package com.bcopstein;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -12,9 +14,11 @@ import com.bcopstein.entidades.geometria.SituacaoReta;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 public class BairroTest {
-    private Area a1,a2;
+    private Area a1,a2,a3,a4;
     private Reta reta, reta1;
 
     @BeforeEach
@@ -28,7 +32,51 @@ public class BairroTest {
         when(a2.classifica(reta)).thenReturn(SituacaoReta.TODA_FORA);
         when(a2.classifica(reta1)).thenReturn(SituacaoReta.INTERSECTA);
         when(a2.pontoCentral()).thenReturn(new Ponto(20,20));
+
+        a3 = mock(Area.class);
+        when(a3.getPInfDir()).thenReturn(new Ponto(3, 2));
+        when(a3.getPSupEsq()).thenReturn(new Ponto(1, 4));
+
+        a4 = mock(Area.class);
+        when(a4.getPInfDir()).thenReturn(new Ponto(5, 2));
+        when(a4.getPSupEsq()).thenReturn(new Ponto(1, 4));
     }
+
+    @Test
+    public void testaAlteraCustoTransporte(){
+        Bairro bairro = new Bairro("Auxiliadora",a2,10);
+        bairro.alteraCustoTransporte(20);
+        assertEquals(bairro.getCustoTransporte(), 20);
+    }
+
+    @Test
+    public void testaNovoBairroQuadrado(){
+        Bairro bairroQ = Bairro.novoBairroQuadrado("teste", new Ponto(1, 4), 2, 20);
+        Bairro bairro = new Bairro("teste",a3,20);
+        assertTrue(bairro.equals(bairroQ));
+    }
+
+    @Test
+    public void testaNovoBairroRetangular(){
+        Bairro bairroR = Bairro.novoBairroRetangular("teste", new Ponto(1, 4), 2, 4, 20);
+        Bairro bairro = new Bairro("teste",a4,20);
+        assertTrue(bairro.equals(bairroR));
+    }
+
+    @Test
+    public void testaEquals(){
+        Bairro bairro = new Bairro("Auxiliadora",a2,10);
+
+        Bairro bairroIgual = new Bairro("Auxiliadora",a2,10);
+        Bairro bairroDiferenteNome = new Bairro("Auxiliadora2",a2,10);
+        Bairro bairroDiferenteArea = new Bairro("Auxiliadora",a1,10);
+        Bairro bairroDiferenteCusto = new Bairro("Auxiliadora",a2,20);
+        assertTrue(bairro.equals(bairroIgual));
+        assertFalse(bairro.equals(bairroDiferenteNome));
+        assertFalse(bairro.equals(bairroDiferenteArea));
+        assertFalse(bairro.equals(bairroDiferenteCusto));
+    }
+
 
     @Test
     // Teste unitário: testa exclusivamente o funcionamento de bairro
@@ -51,5 +99,7 @@ public class BairroTest {
         SituacaoReta sitObs = bairro.getClassificacao(reta1);
         assertEquals(sitEsp, sitObs);
     }
+
+    
 
 }
