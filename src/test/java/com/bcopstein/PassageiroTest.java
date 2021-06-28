@@ -1,19 +1,9 @@
 package com.bcopstein;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 
-import com.bcopstein.entidades.Bairro;
 import com.bcopstein.entidades.Passageiro;
-import com.bcopstein.entidades.Roteiro;
-import com.bcopstein.entidades.geometria.Area;
-import com.bcopstein.entidades.geometria.Ponto;
-import com.bcopstein.entidades.geometria.Reta;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
