@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.bcopstein.casosDeUso.Politicas.CalculoCustoViagemBasico;
-import com.bcopstein.casosDeUso.Politicas.CalculoCustoViagemVerao;
 import com.bcopstein.entidades.Bairro;
 import com.bcopstein.entidades.Passageiro;
 import com.bcopstein.entidades.Roteiro;
@@ -17,7 +16,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class CalculoCustoViagemBasicoTest {
-    private Roteiro roteiro1, roteiro2;
+    private Roteiro roteiro1;
     private Passageiro passageiro1;
     private List<Bairro> bairros;
 
@@ -31,7 +30,7 @@ public class CalculoCustoViagemBasicoTest {
         bairros.add(new Bairro("teste3", new Area(new Ponto(4, 7), new Ponto(7, 4)), 10));
 
         roteiro1 = new Roteiro(bairros.get(0), bairros.get(1), bairros);
-        roteiro2 = new Roteiro(bairros.get(0), bairros.get(2), bairros);
+
 
         passageiro1 = Passageiro.passageiroExistente("000.000.000-99", "teste", 10, 1);
 
@@ -47,5 +46,5 @@ public class CalculoCustoViagemBasicoTest {
         double valor = ccvv.calculoCustoBasico();
         assertEquals(valorEsperado, valor);
     }
-    
+
 }
