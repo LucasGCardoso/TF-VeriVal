@@ -20,14 +20,20 @@ public class PassageiroTest {
     public void testaNovoPassageiro(){
         Passageiro pass = Passageiro.novoPassageiro("000.000.000-99", "teste");
         Passageiro passageiroEsperado = Passageiro.passageiroExistente("000.000.000-99", "teste", 8, 1);
-        assertEquals(pass, passageiroEsperado);
+        assertEquals(pass.getCPF(), passageiroEsperado.getCPF());
+        assertEquals(pass.getNome(), passageiroEsperado.getNome());
+        assertEquals(pass.getPontuacaoAcumulada(), passageiroEsperado.getPontuacaoAcumulada());
+        assertEquals(pass.getQtdadeAvaliacoes(), passageiroEsperado.getQtdadeAvaliacoes());
     }
 
     @Test
     public void testaPassageiroExistente(){
         Passageiro pass = Passageiro.passageiroExistente("000.000.000-99", "teste",7,4);
         Passageiro passageiroEsperado = Passageiro.passageiroExistente("000.000.000-99", "teste", 7,4);
-        assertEquals(pass, passageiroEsperado);
+        assertEquals(pass.getCPF(), passageiroEsperado.getCPF());
+        assertEquals(pass.getNome(), passageiroEsperado.getNome());
+        assertEquals(pass.getPontuacaoAcumulada(), passageiroEsperado.getPontuacaoAcumulada());
+        assertEquals(pass.getQtdadeAvaliacoes(), passageiroEsperado.getQtdadeAvaliacoes());
     }
 
     @Test
@@ -39,7 +45,10 @@ public class PassageiroTest {
     public void testaInfoPontuacao(){
         passageiro.infoPontuacao(1);
         Passageiro passageiroEsperado = Passageiro.passageiroExistente("000.000.000-99", "teste", 9,3);
-        assertEquals(passageiro, passageiroEsperado);
+        assertEquals(passageiro.getCPF(), passageiroEsperado.getCPF());
+        assertEquals(passageiro.getNome(), passageiroEsperado.getNome());
+        assertEquals(passageiro.getPontuacaoAcumulada(), passageiroEsperado.getPontuacaoAcumulada());
+        assertEquals(passageiro.getQtdadeAvaliacoes(), passageiroEsperado.getQtdadeAvaliacoes());
     }
 
     @Test

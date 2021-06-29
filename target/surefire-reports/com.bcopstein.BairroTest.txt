@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.bcopstein.BairroTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.081 s <<< FAILURE! - in com.bcopstein.BairroTest
+com.bcopstein.BairroTest.testaNovoBairroQuadrado  Time elapsed: 0.003 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at com.bcopstein.BairroTest.testaNovoBairroQuadrado(BairroTest.java:54)
+
+com.bcopstein.BairroTest.testaNovoBairroRetangular  Time elapsed: 0.003 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at com.bcopstein.BairroTest.testaNovoBairroRetangular(BairroTest.java:61)
+

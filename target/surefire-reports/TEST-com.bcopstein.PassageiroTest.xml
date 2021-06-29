@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.bcopstein.PassageiroTest" time="0.077" tests="5" errors="0" skipped="0" failures="3">
+  <properties>
+    <property name="java.specification.version" value="15"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.runtime.version" value="15.0.2+7-27"/>
+    <property name="java.class.path" value="/workspaces/verival/TF-VeriVal/target/test-classes:/workspaces/verival/TF-VeriVal/target/classes:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.2/junit-jupiter-params-5.6.2.jar:/root/.m2/repository/org/mockito/mockito-core/3.5.13/mockito-core-3.5.13.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.10.15/byte-buddy-1.10.15.jar:/root/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.15/byte-buddy-agent-1.10.15.jar:/root/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar:"/>
+    <property name="user.name" value="root"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="path.separator" value=":"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="os.version" value="5.4.72-microsoft-standard-WSL2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vm.specification.version" value="15"/>
+    <property name="os.name" value="Linux"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="localRepository" value="/root/.m2/repository"/>
+    <property name="sun.boot.library.path" value="/usr/local/openjdk-15/lib"/>
+    <property name="sun.java.command" value="/workspaces/verival/TF-VeriVal/target/surefire/surefirebooter15133073196042261372.jar /workspaces/verival/TF-VeriVal/target/surefire 2021-06-29T21-53-21_319-jvmRun1 surefire9682099045395788819tmp surefire_014271120187771669917tmp"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/workspaces/verival/TF-VeriVal/target/test-classes:/workspaces/verival/TF-VeriVal/target/classes:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.2/junit-jupiter-params-5.6.2.jar:/root/.m2/repository/org/mockito/mockito-core/3.5.13/mockito-core-3.5.13.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.10.15/byte-buddy-1.10.15.jar:/root/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.15/byte-buddy-agent-1.10.15.jar:/root/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.version" value="15.0.2"/>
+    <property name="user.home" value="/root"/>
+    <property name="user.dir" value="/workspaces/verival/TF-VeriVal"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.version.date" value="2021-01-19"/>
+    <property name="java.home" value="/usr/local/openjdk-15"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/workspaces/verival/TF-VeriVal"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="15.0.2+7-27"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="59.0"/>
+    <property name="surefire.real.class.path" value="/workspaces/verival/TF-VeriVal/target/surefire/surefirebooter15133073196042261372.jar"/>
+  </properties>
+  <testcase name="testaInfoPontuacaoInvalida" classname="com.bcopstein.PassageiroTest" time="0.037"/>
+  <testcase name="testaInfoPontuacao" classname="com.bcopstein.PassageiroTest" time="0.016">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: com.bcopstein.entidades.Passageiro@1b8a29df<Passageiro [cpf=000.000.000-99, nome=teste, pontuacaoAcumulada=9, qtdadeAvaliacoes=3]> but was: com.bcopstein.entidades.Passageiro@4fbe37eb<Passageiro [cpf=000.000.000-99, nome=teste, pontuacaoAcumulada=9, qtdadeAvaliacoes=3]>
+	at com.bcopstein.PassageiroTest.testaInfoPontuacao(PassageiroTest.java:42)
+]]></failure>
+  </testcase>
+  <testcase name="testaNovoPassageiro" classname="com.bcopstein.PassageiroTest" time="0.001">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: com.bcopstein.entidades.Passageiro@3e6f3f28<Passageiro [cpf=000.000.000-99, nome=teste, pontuacaoAcumulada=8, qtdadeAvaliacoes=1]> but was: com.bcopstein.entidades.Passageiro@7e19ebf0<Passageiro [cpf=000.000.000-99, nome=teste, pontuacaoAcumulada=8, qtdadeAvaliacoes=1]>
+	at com.bcopstein.PassageiroTest.testaNovoPassageiro(PassageiroTest.java:23)
+]]></failure>
+  </testcase>
+  <testcase name="testaPassageiroExistente" classname="com.bcopstein.PassageiroTest" time="0.001">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: com.bcopstein.entidades.Passageiro@2474f125<Passageiro [cpf=000.000.000-99, nome=teste, pontuacaoAcumulada=7, qtdadeAvaliacoes=4]> but was: com.bcopstein.entidades.Passageiro@7357a011<Passageiro [cpf=000.000.000-99, nome=teste, pontuacaoAcumulada=7, qtdadeAvaliacoes=4]>
+	at com.bcopstein.PassageiroTest.testaPassageiroExistente(PassageiroTest.java:30)
+]]></failure>
+  </testcase>
+  <testcase name="testaGetPontuacaoMedia" classname="com.bcopstein.PassageiroTest" time="0.001"/>
+</testsuite>

@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.bcopstein.PassageiroTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.077 s <<< FAILURE! - in com.bcopstein.PassageiroTest
+com.bcopstein.PassageiroTest.testaInfoPontuacao  Time elapsed: 0.016 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: com.bcopstein.entidades.Passageiro@1b8a29df<Passageiro [cpf=000.000.000-99, nome=teste, pontuacaoAcumulada=9, qtdadeAvaliacoes=3]> but was: com.bcopstein.entidades.Passageiro@4fbe37eb<Passageiro [cpf=000.000.000-99, nome=teste, pontuacaoAcumulada=9, qtdadeAvaliacoes=3]>
+	at com.bcopstein.PassageiroTest.testaInfoPontuacao(PassageiroTest.java:42)
+
+com.bcopstein.PassageiroTest.testaNovoPassageiro  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: com.bcopstein.entidades.Passageiro@3e6f3f28<Passageiro [cpf=000.000.000-99, nome=teste, pontuacaoAcumulada=8, qtdadeAvaliacoes=1]> but was: com.bcopstein.entidades.Passageiro@7e19ebf0<Passageiro [cpf=000.000.000-99, nome=teste, pontuacaoAcumulada=8, qtdadeAvaliacoes=1]>
+	at com.bcopstein.PassageiroTest.testaNovoPassageiro(PassageiroTest.java:23)
+
+com.bcopstein.PassageiroTest.testaPassageiroExistente  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: com.bcopstein.entidades.Passageiro@2474f125<Passageiro [cpf=000.000.000-99, nome=teste, pontuacaoAcumulada=7, qtdadeAvaliacoes=4]> but was: com.bcopstein.entidades.Passageiro@7357a011<Passageiro [cpf=000.000.000-99, nome=teste, pontuacaoAcumulada=7, qtdadeAvaliacoes=4]>
+	at com.bcopstein.PassageiroTest.testaPassageiroExistente(PassageiroTest.java:30)
+
