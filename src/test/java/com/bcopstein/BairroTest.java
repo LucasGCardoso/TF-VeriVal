@@ -47,19 +47,19 @@ public class BairroTest {
         assertEquals(bairro.getCustoTransporte(), 20);
     }
 
-    @Test
-    public void testaNovoBairroQuadrado(){
-        Bairro bairroQ = Bairro.novoBairroQuadrado("teste", new Ponto(1, 4), 2, 20);
-        Bairro bairro = new Bairro("teste",a3,20);
-        assertTrue(bairro.equals(bairroQ));
-    }
+    // @Test
+    // public void testaNovoBairroQuadrado(){
+    //     Bairro bairroQ = Bairro.novoBairroQuadrado("teste", new Ponto(1, 4), 2, 20);
+    //     Bairro bairro = new Bairro("teste",a3,20);
+    //     assertTrue(bairro.equals(bairroQ));
+    // }
 
-    @Test
-    public void testaNovoBairroRetangular(){
-        Bairro bairroR = Bairro.novoBairroRetangular("teste", new Ponto(1, 4), 2, 4, 20);
-        Bairro bairro = new Bairro("teste",a4,20);
-        assertTrue(bairro.equals(bairroR));
-    }
+    // @Test
+    // public void testaNovoBairroRetangular(){
+    //     Bairro bairroR = Bairro.novoBairroRetangular("teste", new Ponto(1, 4), 2, 4, 20);
+    //     Bairro bairro = new Bairro("teste",a4,20);
+    //     assertTrue(bairro.equals(bairroR));
+    // }
 
     @Test
     public void testaEquals(){
